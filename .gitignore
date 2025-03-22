@@ -1,0 +1,18 @@
+# 一時ファイル
+*.tmp
+*.log
+
+# ノードモジュール
+node_modules/
+
+# ビルドディレクトリ
+dist/
+build/
+
+# 環境設定ファイル
+.env
+
+# Pyxel生成物
+**/pc/
+**/web/
+*.pyxapp
