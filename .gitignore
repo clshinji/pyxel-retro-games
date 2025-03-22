@@ -1,6 +1,7 @@
 # 一時ファイル
 *.tmp
 *.log
+.dev/
 
 # ノードモジュール
 node_modules/
@@ -15,4 +16,4 @@ build/
 # Pyxel生成物
 **/pc/
 **/web/
-*.pyxapp
+**/*.pyxapp
