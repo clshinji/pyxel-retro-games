@@ -17,3 +17,5 @@ build/
 **/pc/
 **/web/
 **/*.pyxapp
+**/*.pyxres
+**/*.bdf
