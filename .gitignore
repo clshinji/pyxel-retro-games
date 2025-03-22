@@ -1,7 +1,7 @@
 # 一時ファイル
 *.tmp
 *.log
-.dev/
+
 
 # ノードモジュール
 node_modules/
@@ -12,6 +12,10 @@ build/
 
 # 環境設定ファイル
 .env
+
+# 開発環境用
+.dev/
+env_pyxel/
 
 # Pyxel生成物
 **/pc/

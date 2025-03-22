@@ -9,9 +9,21 @@ pyxel については、[pyxel の公式サイト](https://github.com/kitao/pyxe
 
 # デプロイメモ
 
+ローカル環境でゲームを開発・実行する方法をメモしておきます。
+
 ## 仮想環境を有効化する
 
-pyxel ディレクトリで実行する
+まずは [pyxel の公式サイト](https://github.com/kitao/pyxel/blob/main/docs/README.ja.md) に従って必要なパッケージをインストールします。
+
+必要な場合は、仮想環境を作成して有効化しても OK です。その場合のコマンドも参考にメモしておきます。
+
+（参考）仮想環境を venv で作成
+
+```
+python -m venv env_pyxel
+```
+
+（参考）仮想環境を有効化
 
 ```
 source env_pyxel/bin/activate
@@ -22,7 +34,9 @@ source env_pyxel/bin/activate
 ゲーム用ディレクトリ (my_game) で実行
 
 ```
+
 python game.py
+
 ```
 
 ## エディタを起動
@@ -30,7 +44,9 @@ python game.py
 ゲーム用ディレクトリ (my_game) で実行
 
 ```
+
 pyxel edit my_resource.pyxres
+
 ```
 
 ## HTML ファイルの作成
@@ -38,11 +54,13 @@ pyxel edit my_resource.pyxres
 pyxel ディレクトリで実行する。
 
 ```
+
 pyxel package my_game my_game/game.py
 cd web
 pyxel app2html ../my_game.pyxapp
 mv my_game.html index.html
 cd ..
+
 ```
 
 ## デプロイ手順
@@ -52,7 +70,9 @@ cd ..
 pyxel ディレクトリで実行する。
 
 ```
+
 aws s3 cp web/index.html s3://pyxel-apps-clshinji/index.html
+
 ```
 
 ### CloudFront の操作
@@ -60,7 +80,9 @@ aws s3 cp web/index.html s3://pyxel-apps-clshinji/index.html
 index.html を強制的に公開する（キャッシュ削除）
 
 ```
+
 aws cloudfront create-invalidation --distribution-id E2NG247DOZH6YH --paths /index.html
+
 ```
 
 # 以下、開発用メモ
@@ -82,3 +104,7 @@ aws cloudfront create-invalidation --distribution-id E2NG247DOZH6YH --paths /ind
     - 一定時間プレイヤのスピードを上げる
     - 一定時間石の数を減らす
     - 一定時間石の数を増やす
+
+```
+
+```
